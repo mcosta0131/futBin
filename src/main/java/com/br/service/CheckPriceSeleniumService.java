@@ -57,6 +57,8 @@ public class CheckPriceSeleniumService {
 
 		if(preco <= 350000) {
 			sendEmail(preco);
+		}else{
+			System.out.println("JOGADOR NÃO ESTA A BAIXO DO PREÇO BASE");
 		}
 
 	}
