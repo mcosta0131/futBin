@@ -14,8 +14,8 @@ public class CheckPriceSeleniumScheduler {
 	@Autowired
 	private CheckPriceSeleniumService service;
 	
-	@Scheduled(cron = "${scheduler.cron.buscaPreco}")
-//	@Scheduled(cron = "*/5 * * * * *")
+//	@Scheduled(cron = "${scheduler.cron.buscaPreco}")
+//	@Scheduled(cron = "*/5 * * * * *") // 5 SEGUNDOS - ATIVAR PARA TESTES
 	public void testSelenium() {
 		System.out.println("INICIANDO SINCRONIZAÇÃO DE BUSCA DE PREÇOS");
 		service.getPrice();
