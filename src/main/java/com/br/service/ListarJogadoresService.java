@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ListarJogadoresService {
 
-	public void doLogin() {
+	public static void doLogin() {
 		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
 
 		ChromeOptions chromeOptions = new ChromeOptions();
@@ -28,8 +28,13 @@ public class ListarJogadoresService {
 		
 		//TODO - IMPLEMENTAR PREENCHIMENTO DE LOGIN E SENHA
 		driver.findElement(By.id("email")).sendKeys("mateus00131@gmail.com");
-		driver.findElement(By.id("password")).sendKeys("Sasalamel01");
+		driver.findElement(By.id("password")).sendKeys("Sasalamel02@");
 		driver.findElement(By.id("btnLogin")).click();
 	
+		WebDriverWait waitBtn = new WebDriverWait(driver, 40);
+		WebElement transferBtn = waitBtn.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/main/section/nav/button[3]")));
+		
+		WebDriverWait waitBtn2 = new WebDriverWait(driver, 40);
+		WebElement transferBtn2 = waitBtn2.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/main/section/section/div[2]/div/div/div[3]/div[2]/div")));
 	}
 }

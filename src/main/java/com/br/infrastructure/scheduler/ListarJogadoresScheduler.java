@@ -17,7 +17,7 @@ public class ListarJogadoresScheduler {
 	private ListarJogadoresService service;
 	
 	
-	@Scheduled(cron = "*/5 * * * * *") // 5 SEGUNDOS - ATIVAR PARA TESTES
+//	@Scheduled(cron = "*/5 * * * * *") // 5 SEGUNDOS - ATIVAR PARA TESTES
 	public void listaJogadores() {
 		System.out.println("INICIANDO PROCESSO DE LISTAR JOGADORES");
 		service.doLogin();
